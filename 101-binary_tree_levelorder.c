@@ -57,13 +57,13 @@ void linked_node(link_t **head, const binary_tree_t *tree, size_t level)
 	}
 	else
 	{
-		aux = *head;
-		while (aux->next != NULL)
+		uk = *head;
+		while (uk->next != NULL)
 		{
-			aux = aux->next;
+			uk = uk->next;
 		}
 		new->next = NULL;
-		aux->next = new;
+		uk->next = new;
 	}
 }
 /**
@@ -120,7 +120,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		}
 		while (head != NULL)
 		{
-			aux = head;
+			uk = head;
 			head = head->next;
 			free(aux);
 		}
