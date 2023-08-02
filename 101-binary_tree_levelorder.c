@@ -93,7 +93,7 @@ void recursion(link_t **head, const binary_tree_t *tree)
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	link_t *head, *aux;
+	link_t *head, *uk;
 	size_t height = 0, count = 0;
 
 	if (!tree || !func)
@@ -107,14 +107,14 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		recursion(&head, tree);
 		while (count <= height)
 		{
-			aux = head;
-			while (aux != NULL)
+			uk = head;
+			while (uk != NULL)
 			{
-				if (count == aux->n)
+				if (count == uk->n)
 				{
-					func(aux->node->n);
+					func(uk->node->n);
 				}
-				aux = aux->next;
+				uk = uk->next;
 			}
 			count++;
 		}
