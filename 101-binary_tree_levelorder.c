@@ -41,7 +41,7 @@ size_t binary_tree_depth(const binary_tree_t *tree)
  */
 void linked_node(link_t **head, const binary_tree_t *tree, size_t level)
 {
-	link_t *new, *aux;
+	link_t *new, *uk;
 
 	new = malloc(sizeof(link_t));
 	if (new == NULL)
