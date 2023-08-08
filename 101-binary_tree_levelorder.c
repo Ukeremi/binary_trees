@@ -122,7 +122,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		{
 			uk = head;
 			head = head->next;
-			free(aux);
+			free(uk);
 		}
 	}
 }
